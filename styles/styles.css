@@ -16,6 +16,7 @@ body {
 .main-content {
     background-color: #fff;
     padding: 105px 90px;
+    width: 100%;
 }
 
 /* sidebar */
@@ -136,7 +137,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     color: #595959;
-    width: 400px;
+    width: 600px;
 }
 
 /* project styles */
@@ -284,3 +285,60 @@ body {
     color: #A8A8A8;
 }
 
+
+/* styles for mob */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-content {
+        width: unset;
+        padding: 35px 50px;
+    }
+
+    .sidebar {
+        width: unset;
+    }
+    
+    .photo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projects-list, .about-description {
+        width: unset;
+        max-width: unset;
+    }
+}
+
+@media (max-width: 545px) {
+    .main-content {
+        padding: 35px 20px;
+    }
+
+    .project-value {
+        display: none;
+    }
+
+    .project-link::after {
+        content: none;
+    }
+
+    .project-link {
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 400px) {
+    .photo {
+        width: 85%;
+    }
+
+    .contacts, .tech-skills, .soft-skills {
+        margin: 0 30px 50px 30px;
+    }
+}
