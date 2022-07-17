@@ -63,6 +63,11 @@ body {
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
 }
 
 .tech-skills-list {
@@ -151,6 +156,11 @@ body {
 .projects-list {
     padding: 0;
     margin-left: 15px;
+    max-width: 500px;
+}
+
+.project {
+    line-height: 1.4;
 }
 
 .project-item {
@@ -171,6 +181,23 @@ body {
 
 .project-link {
     margin-left: 10px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    margin-left: .3em;
+    bottom: .35em;
+    width: 100%;
+    border-bottom: .1em dotted;
 }
 
 .project-bracket {
@@ -179,6 +206,11 @@ body {
     font-size: 14px;
     line-height: 24px;
     color: #000000;
+}
+
+.project-value {
+    float: right;
+    padding-left: .2em;
 }
 
 /* work-experience styles */
