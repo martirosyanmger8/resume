@@ -1,6 +1,17 @@
+* {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #F5F7FA;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* main */
@@ -16,24 +27,23 @@ body {
 .main-content {
     background-color: #fff;
     padding: 105px 90px;
-    width: 100%;
+    width: calc(100% - 370px);
 }
 
 /* sidebar */
 .sidebar {
     background-color: #1E2939;
-    padding-top: 40px;
-    width: 370px;
+    max-width: 370px;
+    width: 100%;
 }
 
 .photo {
-    width: 370px;
+    width: 100%;
     margin-bottom: 50px;
 }
 
 .contacts , .tech-skills , .soft-skills {
-    margin-left: 40px;
-    margin-bottom: 50px;
+    margin: 0 40px 50px;
 }
 
 .contacts div > p {
@@ -56,6 +66,15 @@ body {
     font-size: 14px;
     line-height: 24px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-type > i {
+    min-width: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-link {
@@ -248,6 +267,7 @@ body {
 .work-list {
     padding: 0;
     margin-left: 15px;
+    max-width: 500px;
 }
 
 .work-list li {
@@ -287,7 +307,29 @@ body {
 
 
 /* styles for mob */
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
+    .main {
+        width: 100%;
+    }
+    .sidebar {
+        max-width: 300px;
+    }
+    .main-content {
+        padding: 100px 40px;
+    }
+    .contacts, .tech-skills, .soft-skills {
+        margin: 0 30px 50px;
+    }
+}
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 40px;
+    }
+    .about-description {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
     .main {
         flex-direction: column;
         width: 100%;
@@ -296,11 +338,10 @@ body {
 
     .main-content {
         width: unset;
-        padding: 35px 50px;
     }
 
     .sidebar {
-        width: unset;
+        max-width: unset;
     }
     
     .photo {
@@ -330,15 +371,5 @@ body {
 
     .project-link {
         word-break: break-all;
-    }
-}
-
-@media (max-width: 400px) {
-    .photo {
-        width: 85%;
-    }
-
-    .contacts, .tech-skills, .soft-skills {
-        margin: 0 30px 50px 30px;
     }
 }
